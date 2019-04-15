@@ -10,7 +10,8 @@ $(document).ready(function() {
         // {Name: 'Jar Jar Binks', Image:'assets/images/JarJar.jpg', Health: '200', Attack:'50',AttackBonus:'50',Counter:'40'},
     ];
     
-    var chosenOne = fighters[i];
+    var chosenOne = [];
+    var enemies = [];
     // Dynamically making bootsrap card in jquery ftw!
         for (var i = 0; i < fighters.length; i++){
         var column = $("<div>");
@@ -37,16 +38,44 @@ $(document).ready(function() {
 
         $(".card").on("click",function(){
             if ($(this).hasClass(fighters[0].Name)){
-            console.log("I am Han Solo");
+                chosenOne = fighters[0];
+                fighters.splice(0,1);
+                enemies.push(fighters[0],fighters[1],fighters[2]);
+                fighters = []
+                console.log(chosenOne);
+                console.log(fighters);
+                console.log(enemies);
+                console.log("I am Han Solo");
             }
             else if ($(this).hasClass(fighters[1].Name)){
-            console.log("I am Greedo");
+                chosenOne = fighters[1];
+                fighters.splice(1,1);
+                enemies.push(fighters[0],fighters[1],fighters[2]);
+                fighters = []
+                console.log(chosenOne);
+                console.log(fighters);
+                console.log(enemies);
+                console.log("I am Greedo");
             }
-           else  if ($(this).hasClass(fighters[2].Name)){
-            console.log("I am Boba Fett");
-           }
+            else  if ($(this).hasClass(fighters[2].Name)){
+                chosenOne = fighters[2];
+                fighters.splice(2,1);
+                enemies.push(fighters[0],fighters[1],fighters[2]);
+                fighters = []
+                console.log(chosenOne);
+                console.log(fighters);
+                console.log(enemies);
+                console.log("I am Boba Fett");
+            }
             else if ($(this).hasClass(fighters[3].Name)){
-            console.log("I am Lando");
+                chosenOne = fighters[3];
+                fighters.splice(3,1);
+                enemies.push(fighters[0],fighters[1],fighters[2]);
+                fighters = []
+                console.log(chosenOne);
+                console.log(fighters);
+                console.log(enemies);
+                console.log("I am Lando");
             }
         });
     
