@@ -1,0 +1,42 @@
+body{
+    background-image: url("../images/background.jpg");
+}
+
+.fighters{
+ background-color: darkgreen;
+ border: 8px dotted black;
+}
+
+.enemy{
+    background-color: black;
+    border: 8px dotted crimson;
+    
+}
+
+.chosen-one{
+    background-color: black;
+    border: 8px dotted darkgreen;
+}
+
+.defender{
+    background-color: crimson;
+    border: 8px dotted black;
+}
+
+.card-text{
+    margin:auto;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.card-img-top{
+    height:150px;
+}
+
+h1{
+    color:yellow;
+}
+
+.battle{
+    color:yellow;
+}
